@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v121/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: brown;
+    user-select: none;
+}
+footer{
+    width: 100%;
+    height: 15vh;
+    background-color: dimgray;
+}
+.content{
+    min-height: 52vh;
+}
+.inp{
+    color: #333333;
+    transition: 0.5s;
+    padding-left: 20px;
+    border: none;
+    box-shadow:rgba(0, 0, 0, 0.24) 0 0 30px;
+    width: 80vw;
+    height: 10vw;
+    border-radius: 3vw;
+    overflow: hidden;
+}
+.inp:hover{
+    box-shadow:rgba(0, 0, 0, 0.521) 0 0 50px;
+}
+.zoom{
+    font-family: 'Material Icons';
+    font-size: 7vw;
+    transition: 0.2s;
+    float: right;
+    display: block;
+    padding: 1.5vw 2vw 1.5vw 0;
+    color: #666666;
+    user-select: none;
+}
+.zoom:hover{
+    color: black;
+}
+#search{
+    font-size: 4.5vw;
+    font-family: 'Nunito';
+    outline: none;
+    border:none;
+    width: 86%;
+    height: 100%;
+}
+.dr{
+    font-size: 6vw;
+    user-select: none;
+    color: gray;
+
+}
+.logo{
+    width: 75vw;
+    margin-top: 1vh;
+}
+.s1{
+    font-family: 'Nunito';
+    margin-top: 20vh;
+    font-size: 4.5vw;
+    color: dimgray;
+}
+#ind{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#res{
+    min-height: 75vh;
+}
+#res ul{
+    list-style-type: none;
+    width: 100%;
+}
+#res ul li li{
+    border: none;
+}
+#res ul li{
+    width: 75vw;
+    height: 15vh;
+    border-radius: 3vw;
+    padding: 15px 20px 20px 20px;
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    box-shadow: lightgray 0 5px 5px;
+    font-family: 'Nunito';
+    overflow: hidden;
+}
+#res p{
+    font-size: 3vw;
+}
+#res h2{
+    font-size: 5vw;
+}
+#res a{
+    color:#1A0DAB;
+    text-decoration: none;
+}
+#res a:hover{
+    text-decoration:underline;
+}
+nav{
+    font-size: 4vw;
+    padding: 1.5vw;
+    position: fixed;
+    margin-top: 15vh;
+    margin-right: 90vw;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    box-shadow: lightgray 0 5px 5px;
+    font-family: 'Material Icons';
+    background-color: white;
+}
+nav a{
+    transition: 0.2s;
+    color: #777777;
+    text-decoration: none;
+}
+nav a:hover{
+    color:black;
+}
+.cont{
+    width: 60vw;
+    min-height: 71vh;
+    font-family: 'Nunito';
+    border-style: solid;
+    border-color: gray;
+    border-width: 0 1px 0 1px;
+    padding: 30px;
+    background-color: white;
+}
+.cont h1{
+    font-size: 5vw;
+}
+.cont p{
+    font-size: 3vw;
+}
+.rainbow{
+    background: linear-gradient(to right, red, orange, yellow, rgb(0, 255, 0), cyan, blue, rgb(255, 0, 255));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: rainbow 5s ease infinite;
+    animation: rainbow 5s ease infinite;
+    font-size: 25px;
+    line-height: 25px;
+  }
+   
+  @-webkit-keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 50% 0% }
+  }
+   
+  @keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 50% 0% }
+  }
