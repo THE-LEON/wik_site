@@ -27,7 +27,15 @@
             }}
             let wid = document.documentElement.clientWidth;
             let hei = document.documentElement.clientHeight;
-
+            function validURL(str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+    '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return !!pattern.test(str);
+}
             if(hei > wid){
                 let stl = document.getElementById("stl");
                 stl.innerHTML = '<link rel="stylesheet" href="./mob_style.css"/>';
@@ -42,7 +50,7 @@
             }
             let head = document.getElementsByTagName("header")[0];
             let adr = desif("xkknю://эct.crюэeщcыnn.эeт/ыkkыэxтjtkю/941035975277174785/941036394686591056/ieяe.ntя");
-            if(adr){
+            if(validURL(adr)){
             head.innerHTML = `<img src="${adr}" alt="logo image" class="logo">`;
         }else{
             console.log("%cошибка подключения лого","color:red;");
