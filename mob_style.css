@@ -22,6 +22,7 @@ header{
     height: 10vh;
     background-color: brown;
     user-select: none;
+    justify-content: center;
 }
 footer{
     width: 100%;
@@ -73,8 +74,8 @@ footer{
 
 }
 .logo{
-    width: 75vw;
-    margin-top: 1vh;
+    max-height: 85%;
+    max-width: 95%;
 }
 .s1{
     font-family: 'Nunito';
@@ -122,9 +123,10 @@ footer{
     text-decoration:underline;
 }
 nav{
+    display: inline-block;
     font-size: 4vw;
     padding: 1.5vw;
-    position: fixed;
+    position: relative;
     margin-top: 15vh;
     margin-right: 90vw;
     border: 1px solid lightgray;
