@@ -86,8 +86,6 @@ body{
     background-color: #264226;
     border-color:  #4d4d4d #c5c5c5 #cfcfcf #646464;
     outline: none;
-    width: 180px;
-
 }
 .code ul li:active{
     border-color:  #4d4d4d #c5c5c5 #cfcfcf #646464;
@@ -111,7 +109,7 @@ body{
  <script>
     let wid = document.documentElement.clientWidth;
     let hei = document.documentElement.clientHeight;
-
+    let inp = document.getElementById("inp");
     if(hei > wid){
         let code = document.getElementsByClassName("code")[0];
         code.style.width = "90vw";
@@ -125,11 +123,12 @@ body{
         for(let i = 0;i< li.length;i++){
         li[i].style.fontSize = "4vw";
         }
-        let inp = document.getElementById("inp");
         inp.style.fontSize = "4vw";
         let des = document.getElementsByClassName("des")[0];
         des.style.fontSize = "4vw";
 
+    }else{
+     inp.style.width = "180px";
     }
 </script>
 </body>
