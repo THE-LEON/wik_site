@@ -47,7 +47,7 @@
             }
 
             let desc = data[results[i]].description;
-            links[i] = `<li><h2 ${title_tag}><a href="${"#"}">${tit}</a></h2><p>${desc}</p></li>`;
+            links[i] = `<li><h2 ${title_tag}><a href="${w_url}">${tit}</a></h2><p>${desc}</p></li>`;
         }
         res_ul.innerHTML = links.join("");
         });
