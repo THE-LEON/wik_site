@@ -25,17 +25,29 @@
             let arr;
     let array = fetch('../data.json').then((resp) => {return resp.json();}).then((data) => {
         data = JSON.parse(desif(JSON.stringify(data)));
+
         let results = location.search.substring(3).split("-");
         let links = [];
         console.log(results)
             let res_ul = document.getElementById("res_ul");
-        for(let i = 0;i < results.length;i++){
+        for(i = 0;i < results.length;i++){
             
-            let w_url = new URL(`${location.origin}/wik_site/sub_pages/wiki.html`);
+            let w_url = new URL(`${location.origin}wik_site/sub_pages/wiki.html`);
             w_url.searchParams.set("s",results[i]);
 
+            let title_tag = "";
+            let tit = data[results[i]].title;
+            let x = tit.split('');
+            for(let i = 0;i < x.length;i++){
+                if(x[i] === "&"){
+                    title_tag = `title="${x.slice(i+1).join("")}"`;
+                    console.log(title_tag)
+                    tit = x.slice(0,i).join("");
+                }
+            }
+
             let desc = data[results[i]].description;
-            links[i] = `<li><h2><a href="${w_url}">${data[results[i]].title}</a></h2><p>${desc}</p></li>`;
+            links[i] = `<li><h2 ${title_tag}><a href="${"#"}">${tit}</a></h2><p>${desc}</p></li>`;
         }
         res_ul.innerHTML = links.join("");
         });
