@@ -32,7 +32,7 @@
             let res_ul = document.getElementById("res_ul");
         for(i = 0;i < results.length;i++){
             
-            let w_url = new URL(`${location.origin}wik_site/sub_pages/wiki.html`);
+            let w_url = new URL(`${location.origin}/wik_site/sub_pages/wiki.html`);
             w_url.searchParams.set("s",results[i]);
 
             let title_tag = "";
