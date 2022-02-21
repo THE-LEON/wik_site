@@ -123,6 +123,7 @@ footer{
     text-decoration:underline;
 }
 nav{
+    user-select: none;
     display: inline-block;
     font-size: 4vw;
     padding: 1.5vw;
@@ -180,4 +181,60 @@ nav a:hover{
     0% { background-position: 0% 50% }
     50% { background-position: 100% 50% }
     100% { background-position: 50% 0% }
+  }
+  #all_art{
+      width: 100%;
+      list-style-type: none;
+      border: 1px solid lightgray;
+      border-radius: 15px;
+      box-shadow: lightgrey 0 2px 2px;
+  }
+  #all_art li{
+    padding: 10px;
+      border-width: 0 0 1px 0;
+      border-color: lightgray;
+      border-style: solid;
+  }
+  #all_art li a{
+    text-decoration: none;
+    font-family: 'Nunito';
+    color: #1A0DAB;
+  }
+  #all_art li:last-child{
+    border-width: 0;
+  }
+  #all_art_div{
+    width:70%;
+    min-height: 100px;
+    margin-bottom: 10vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  #all_art_div h1{
+    font-family: 'Nunito';
+    color: gray;
+    text-align: center;
+  }
+  #ind img{
+      width: 30%;
+      margin: 100px 20px 20px 20px;
+      transition: 0.5s ease-in-out;
+  }
+  #ind img:hover{
+      width: 35%;
+  }
+  
+  #all_art_div h2{
+    font-family: 'Nunito';
+    color: gray;
+    text-align: center;
+  }
+  
+  #all_art_div a:hover{
+      text-decoration: underline;
+  }
+  #all_art_div img{
+      width: 100%;
+      user-select: none;
   }
