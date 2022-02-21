@@ -9,6 +9,7 @@ function search_z(){
 }
 
 function search(val){
+    if(val !== "x"){
     
     let arr;
     let res_str = [];
@@ -20,13 +21,19 @@ function search(val){
                 if(val.toLowerCase().match(data[x].tags[j])){
                     res_str.push(x);
                 }}}
-            let url = new URL(`${location.origin}/wik_site/sub_pages/search.html`);
+            let url = new URL(`${location.origin}/sub_pages/search.html`);
             url.searchParams.set("s",res_str.join("-"));
 
             console.log(url)
             location.href = url;}catch(err){
+                console.log(err)
         document.getElementById("recode").innerText = "ввести пароль ещё раз";
     }
         
-        });}
+        });}else{
+            let url = new URL(`${location.origin}/sub_pages/search.html`);
+            url.searchParams.set("s","x");
+            location.href = url;
+        }
+    }
             
