@@ -70,15 +70,18 @@
             w_url.searchParams.set("s",i);
 
             let title_tag = "";
+            let contin = false;
             let tit = data[i].title;
             let x = tit.split('');
             for(let i = 0;i < x.length;i++){
                 if(x[i] === "&"){
+                    if(x.slice(i+1).join("") === "/hide"){contin = true}
                     title_tag = `title="${x.slice(i+1).join("")}"`;
                     console.log(title_tag)
                     tit = x.slice(0,i).join("");
                 }
             }
+                if(contin){continue}
                 arts[i] = `<li><h2 ${title_tag}><a href="${w_url}">${tit}</a></h2></li>`;
                 aau.innerHTML = arts.join("");
             }
