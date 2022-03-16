@@ -240,6 +240,6 @@ nav a:hover{
       user-select: none;
   }
 
-body #recode{
+body nav #recode{
     font-family: 'Nunito';
 }
