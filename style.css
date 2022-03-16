@@ -230,3 +230,6 @@ nav a:hover{
   #ind img:hover{
       width: 35%;
   }
+body #recode{
+    font-family: 'Nunito';
+}
