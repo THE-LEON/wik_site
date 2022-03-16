@@ -140,6 +140,7 @@ nav a{
     transition: 0.2s;
     color: #777777;
     text-decoration: none;
+    font-family: 'Material Icons';
 }
 nav a:hover{
     color:black;
