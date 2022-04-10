@@ -13,15 +13,13 @@
     </head>
     <body>
         <header></header>
-        <nav>
-            <a href="../mn.html">home</a>
-        </nav>
+        <a href="../mn.html" class="nav" style="height:3vh;width: 100%;display:block;margin-top: 0;max-width: 100%;border-radius: 0px;text-align: center;border: 0;padding: 1.5vw 0 1.5vw 0;margin: 0;">На главную</a>  
 <div id="res">
     <ul id="res_ul">
     </ul>
 </div>
 <div id="all_art_div">
-    <img src="https://cdn.discordapp.com/attachments/941035975277174785/945362881577353216/332_20220221195421.png">
+    <img src="https://cdn.discordapp.com/attachments/941035975277174785/962808875730485378/error.jpg" >
     <h1>ПО ДАННОМУ ЗАПРОСУ НИЧЕГО НЕ НАЙДЕНО</h1>
     <h2>вот список статей, которые есть на сайте</h2>    
     <ul id="all_art">
@@ -56,7 +54,7 @@
             }
 
             let desc = data[results[i]].description;
-            links[i] = `<li><h2 ${title_tag}><a href="${w_url}">${tit}</a></h2><p>${desc}</p></li>`;
+            links[i] = `<li><h2 ${title_tag}><a href="${"#"}">${tit}</a></h2><p>${desc}</p></li>`;
             res_ul.innerHTML = links.join("");
         }}else{
 
@@ -67,7 +65,7 @@
             for(let i  =0; i < data.length;i++){
                 
             let w_url = new URL(`${location.origin}/wik_site/sub_pages/wiki.html`);
-            w_url.searchParams.set("s",i);
+            w_url.searchParams.set("s",results[i]);
 
             let title_tag = "";
             let contin = false;
@@ -82,7 +80,7 @@
                 }
             }
                 if(contin){continue}
-                arts[i] = `<li><h2 ${title_tag}><a href="${w_url}">${tit}</a></h2></li>`;
+                arts[i] = `<li><h2 ${title_tag}><a href="${"#"}">${tit}</a></h2></li>`;
                 aau.innerHTML = arts.join("");
             }
         res_ul.innerHTML = links.join("");
