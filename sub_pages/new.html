@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      
+<link type="image/png" sizes="120x120" rel="icon" href="https://cdn.discordapp.com/attachments/941035975277174785/944252749988659260/doomer_120.png">
+      <span id="stl">
+        <link rel="stylesheet" href="../style.css"/>
+        </span>
+        <title>Новости</title>
+    </head>
+    <body>
+        <header style="position: fixed;"></header>
+        <a href="../mn.html" class="nav" style="position:fixed;top:13vh;height:3vh;width: 100%;display:block;margin-top: 0;max-width: 100%;border-radius: 0px;text-align: center;border: 0;padding: 1.5vw 0 1.5vw 0;margin: 0;">На главную</a>  
+        <div id="newc" class="cont">
+
+
+        </div>
+        <footer></footer>
+        <script>
+            
+        let array = fetch('../news.json').then((resp) => {return resp.json();}).then((data) => {
+            data = JSON.parse(desif(JSON.stringify(data)));
+            let pageID = location.search.substring(3);
+            let newc = document.getElementById("newc");
+            newc.innerHTML = `<img width="100%" style="border-radius:15px;"><h1 id="page-h1">${data[pageID].title}</h1><p id="page-p">${data[pageID].description}</p>`;
+            newc.children[0].src = data[pageID].img;
+        });
+        </script>
+        <script src="../sifer.js"></script>
+        
+        <script>
+            let wid = document.documentElement.clientWidth;
+            let hei = document.documentElement.clientHeight;
+
+            if(hei > wid){
+                let stl = document.getElementById("stl");
+                stl.innerHTML = '<link rel="stylesheet" href="../mob_style.css"/>';
+            }
+            
+            let head = document.getElementsByTagName("header")[0];
+            let adr = desif("xkknю://эct.crюэeщcыnn.эeт/ыkkыэxтjtkю/941035975277174785/941036394686591056/ieяe.ntя");
+            if(adr){
+            head.innerHTML = `<img src="${adr}" alt="logo image" class="logo">`;
+        }else{
+            console.log("%cошибка подключения лого","color:red;");
+        }
+        </script>
+    </body>
+</html>
