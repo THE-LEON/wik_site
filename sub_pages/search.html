@@ -65,7 +65,7 @@
             for(let i  =0; i < data.length;i++){
                 
             let w_url = new URL(`${location.origin}/wik_site/sub_pages/wiki.html`);
-            w_url.searchParams.set("s",results[i]);
+            w_url.searchParams.set("s",i);
 
             let title_tag = "";
             let contin = false;
