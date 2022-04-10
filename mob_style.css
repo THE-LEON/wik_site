@@ -128,8 +128,8 @@ footer{
 }
 .nav{
     display: block;
-    width: 60px;
-    max-width: 200px;
+    width: 11vw;
+    max-width: 20vw;
     margin-top: 5vh;
     user-select: none;
     display: block;
@@ -246,9 +246,9 @@ footer{
   .inp::before{
       content: 'Чекать по всей школе';
       position: absolute;
-      margin: -30px 0 0 15vw;
+      margin: -5vw 0 0 15vw;
       font-family: 'Nunito';
-      font-size: 20px;
+      font-size: 4vw;
       color: dimgray;
   }
   #mtime{
@@ -260,6 +260,7 @@ footer{
       text-shadow: #333333 0 0 5px;
       font-family: 'Nunito';
       text-align: center;
+      font-size: 4vw;
   }
   #res img{
       display: none;
