@@ -20,7 +20,7 @@ header{
     align-items: center;
     width: 100%;
     height: 10vh;
-    background-color: brown;
+    background: brown;
     user-select: none;
     justify-content: center;
 }
@@ -30,7 +30,8 @@ footer{
     background-color: dimgray;
 }
 .content{
-    min-height: 52vh;
+    margin-top: 7vh;
+    min-height: 65vh;
 }
 .inp{
     color: #333333;
@@ -122,37 +123,39 @@ footer{
 #res a:hover{
     text-decoration:underline;
 }
-nav{
+.t1 {
+    display: none;
+}
+.nav{
+    display: block;
+    width: 60px;
+    max-width: 200px;
+    margin-top: 5vh;
     user-select: none;
-    display: inline-block;
+    display: block;
     font-size: 4vw;
     padding: 1.5vw;
-    position: absolute;
-    margin-top: 15vh;
-    margin-right: 90vw;
     border: 1px solid lightgray;
     border-radius: 15px;
     box-shadow: lightgray 0 5px 5px;
-    font-family: 'Material Icons';
+    font-family: 'Nunito';
     background-color: white;
-}
-nav a{
     transition: 0.2s;
     color: #777777;
     text-decoration: none;
-    font-family: 'Material Icons';
 }
-nav a:hover{
+.nav:hover{
     color:black;
 }
 .cont{
-    width: 60vw;
+    width: 90%;
     min-height: 71vh;
     font-family: 'Nunito';
     border-style: solid;
     border-color: gray;
     border-width: 0 1px 0 1px;
-    padding: 30px;
+    padding: 5px;
+    margin-top: 18vh;
     background-color: white;
 }
 .cont h1{
@@ -218,12 +221,13 @@ nav a:hover{
     text-align: center;
   }
   #ind img{
-      width: 30%;
-      margin: 100px 20px 20px 20px;
+      margin-top: 20px;
+      display: block;
+      width: 100px;
       transition: 0.5s ease-in-out;
   }
   #ind img:hover{
-      width: 35%;
+      width: 130px;
   }
   
   #all_art_div h2{
@@ -239,7 +243,27 @@ nav a:hover{
       width: 100%;
       user-select: none;
   }
-
-body nav #recode{
-    font-family: 'Nunito';
-}
+  .inp::before{
+      content: 'Чекать по всей школе';
+      position: absolute;
+      margin: -30px 0 0 15vw;
+      font-family: 'Nunito';
+      font-size: 20px;
+      color: dimgray;
+  }
+  #mtime{
+      display: inline-block;
+      background-color: brown;
+      height: 3vh;
+      width: 100%;
+      color: lightgrey;
+      text-shadow: #333333 0 0 5px;
+      font-family: 'Nunito';
+      text-align: center;
+  }
+  #res img{
+      display: none;
+  }
+  #res ul li{
+      max-height: 60px;
+  }
