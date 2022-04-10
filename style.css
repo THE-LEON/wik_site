@@ -29,13 +29,11 @@ footer{
     background-color: dimgray;
 }
 .content{
-    min-height: 48vh;
+    min-height: 60vh;
+    padding-top: 10vh;
 }
 .inp{
-    /*padding-right: 50px;
-     background-position: 430px 10px;
-    background-image: url("./search.svg");
-    background-repeat: no-repeat; */
+    float: left;
     color: #333333;
     transition: 0.5s;
     padding-left: 20px;
@@ -69,6 +67,14 @@ footer{
     border:none;
     width: 86%;
     height: 100%;
+}
+.inp::before{
+    content: 'Чекать по всей школе';
+    position: absolute;
+    margin: -30px 0 0 90px;
+    font-family: 'Nunito';
+    font-size: 20px;
+    color: dimgray;
 }
 .dr{
     font-size: 30px;
@@ -119,29 +125,29 @@ footer{
 #res a:hover{
     text-decoration:underline;
 }
-nav{
+.nav{
+    max-width: 100px;
+    display: inline-block;
+    max-height: 40px;
     user-select: none;
     font-size: 18px;
     padding: 10px;
-    position: absolute;
-    margin-top: 20vh;
-    margin-right: 75vw;
+    position: relative;
     border: 1px solid lightgray;
     border-radius: 15px;
     box-shadow: lightgray 0 2px 2px;
     font-family: 'Nunito';
     background-color: white;
-}
-nav a{
     transition: 0.2s;
     color: #777777;
     text-decoration: none;
-    font-family: 'Material Icons';
+    margin-left: 20px;
 }
-nav a:hover{
+.nav:hover{
     color:black;
 }
 .cont{
+    margin-top: 16vh;
     width: 60vw;
     min-height: 61vh;
     font-family: 'Nunito';
@@ -223,13 +229,37 @@ nav a:hover{
       user-select: none;
   }
   #ind img{
-      width: 30%;
-      margin: 20px;
+      margin-top: 20px;
+      display: block;
+      width: 100px;
       transition: 0.5s ease-in-out;
   }
   #ind img:hover{
-      width: 35%;
+      width: 130px;
   }
-body nav #recode{
-    font-family: 'Nunito';
+  #mtime{
+      display: none;
+  }
+  .t1 {
+    float: left;
+    left: 3%;
+    top: 38%;
+    border-radius: 15px;
+    box-shadow: #31303054 0  0 20px;
+    padding:5px;
+    font-family: monospace;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.t1 th {
+    width: 30px;
+    height: 30px;
+    color: #313030;
+}
+.t1 td {
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    color: #313030;
 }
