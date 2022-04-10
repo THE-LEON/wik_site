@@ -1,3 +1,6 @@
+function nw()
+{location.href = new URL(`${location.origin}/sub_pages/news.html`);
+}
 function search_k(elem){
     if(event.key === 'Enter') {
         search(elem.value);        
