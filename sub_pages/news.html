@@ -29,7 +29,7 @@
 
             let cstring = [];
             for(let i = 0;i < data.length;i++){
-            cstring.unshift(`<li><img src="${data[i].img}"><h1><a href="new.html?s=${i}">${data[i].title}</a></h1><p>${data[i].description}</p></li>`);
+            cstring.unshift(`<li><img src="${data[i].img}"><h1><a href="new.html?s=${i}">${data[i].title}</a></h1><h3 style="color:gray;">${data[i].date}</h3><p>${data[i].description}</p></li>`);
             }
 
             nc.innerHTML = `<ul id="res_ul">${cstring.join("")}</ul>`;
